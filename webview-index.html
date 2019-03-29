@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Webview</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        background-color: #888888;
+      }
+
+      .mouse-event-div {
+        width: 75px;
+        height: 75px;
+        background-color: midnightblue;
+        color: #FFF;
+
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+
+      .mouse-event-div.active {
+        background-color: mediumvioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <h4 id="title">Webview</h4>
+    <div style="display: flex">
+      <div id="mousedownDiv" class="mouse-event-div">mousedown</div>
+      <div id="mousemoveDiv" class="mouse-event-div">mouseover</div>
+    </div>
+    <script src="renderer.js"></script>
+    <script>
+      if (window.location.hash !== "") {
+        document.getElementById("title").innerText = window.location.hash.slice(1);
+      }
+    </script>
+  </body>
+</html>

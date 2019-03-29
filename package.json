@@ -1,0 +1,21 @@
+{
+  "name": "electron-issue-webview-mouseevents",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://https://github.com/krisdages/electron-issue-webview-mouseevents",
+  "keywords": [
+    "Electron",
+    "issue",
+    "demo"
+  ],
+  "author": "GitHub, Kris Dages",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.1.2"
+  },
+  "dependencies": {}
+}

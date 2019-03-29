@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Webview mouseup fails outside webview</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        background-color: #DDD;
+      }
+
+      .mouse-event-div {
+        width: 75px;
+        height: 75px;
+        background-color: midnightblue;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        color: #FFF;
+      }
+
+      .mouse-event-div.active {
+        background-color: mediumvioletred;
+      }
+
+      .webview {
+        width: 50vw;
+        height: 33vw;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Main Page</h4>
+
+    <webview src="webview-index.html#Webview 1" class="webview"></webview>
+    <webview src="webview-index.html#Webview 2" class="webview"></webview>
+
+    <div style="display: flex">
+      <div id="mousedownDiv" class="mouse-event-div">mousedown</div>
+      <div id="mousemoveDiv" class="mouse-event-div">mouseover</div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
